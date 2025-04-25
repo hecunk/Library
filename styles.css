@@ -15,6 +15,10 @@ ul {
     margin: 0;
 }
 
+li {
+    width: auto;
+}
+
 h1 {
     margin: 0;
     font-size: 45px;
@@ -43,7 +47,7 @@ h1 {
     background-color: #dadada;
     padding: 20px;
     margin: 30px;
-    width: 350px;
+    width: max(350px, auto);
     height: 270px;
     border-left: solid 15px #37afff;
     border-radius: 20px;
@@ -57,12 +61,15 @@ h1 {
     width: 150px;
     height: 40px;
     border: none;
-    background-color: #37afff;
     color: white;
     font-size: 18px;
     border-radius: 15px;
     font-weight: 600;
     box-shadow: 3px 3px 10px rgb(194, 194, 194);
+}
+
+.delete {
+    background-color: #37afff;
 }
 
 .header button {
@@ -83,7 +90,7 @@ h1 {
     background-color: #bdbdbd;
 }
 
-button:hover {
+button:hover, .read :hover {
     background-color: #2d8ecf;
 }
 

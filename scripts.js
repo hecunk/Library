@@ -22,6 +22,23 @@ function deleteBlock(id, e) {
     }
 }
 
+function toggleRead(id, e) {
+    for (let i = 0; i < bookList.length; i++) {
+        if (bookList[i].id === id) {
+            if (bookList[i].read === "Yes") {
+                bookList[i].read = "No";
+                e.target.textContent = "Unread";
+                e.target.style.backgroundColor = "red";
+            }
+            else {
+                bookList[i].read = "Yes";
+                e.target.textContent = "Read";
+                e.target.style.backgroundColor = "#37afff";
+            }
+        }
+    }
+}
+
 const mainCont = document.querySelector(".main-cont");
 
 function addBookUi() {
@@ -31,12 +48,19 @@ function addBookUi() {
         const title = document.createElement("li");
         const author = document.createElement("li");
         const year = document.createElement("li");
-        const read = document.createElement("li");
         const buttons = document.createElement("div");
         const readButton = document.createElement("button");
         const deleteButton = document.createElement("button");
-        readButton.textContent = "Read";
         readButton.classList.add("read");
+        if (bookList.at(-1).read === "Yes") {
+            readButton.style.backgroundColor = "red";
+            readButton.textContent = "Unread";
+        }
+        else {
+            readButton.style.backgroundColor = "#37afff";
+            readButton.textContent = "Read";
+        }
+        readButton.addEventListener("click", (e) => {toggleRead(bookList.at(-1).id, e)})
         deleteButton.textContent = "Delete";
         deleteButton.classList.add("delete");
         deleteButton.addEventListener("click", (e) => {deleteBlock(bookList.at(-1).id, e)});
@@ -46,11 +70,9 @@ function addBookUi() {
         title.textContent = `Title: ${bookList.at(-1).title}`;
         author.textContent = `Author: ${bookList.at(-1).author}`;
         year.textContent = `Year: ${bookList.at(-1).year}`;
-        read.textContent = `Read: ${bookList.at(-1).read}`;
         ul.appendChild(title);
         ul.appendChild(author);
         ul.appendChild(year);
-        ul.appendChild(read);
         bookBlock.appendChild(ul);
         bookBlock.appendChild(buttons);
         mainCont.appendChild(bookBlock);
