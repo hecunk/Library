@@ -1,0 +1,185 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Cascadia Mono;
+}
+
+body {
+    height: 100%;
+    background-color: #cca776;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 45px;
+}
+
+.header {
+    background-color: #dadada;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 10px 10px rgb(179, 148, 109);
+}
+
+.header img {
+    width: 70px;
+    height: 70px;
+}
+
+.main-cont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-block {
+    background-color: #dadada;
+    padding: 20px;
+    margin: 30px;
+    width: 350px;
+    height: 270px;
+    border-left: solid 15px #37afff;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgb(179, 148, 109);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.read, .delete {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: #37afff;
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+    font-weight: 600;
+    box-shadow: 3px 3px 10px rgb(194, 194, 194);
+}
+
+.header button {
+    border: none;
+    background-color: rgba(179, 148, 109, 0);
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+}
+
+#PlusButton:focus {
+    outline: none;
+}
+
+.header button:hover {
+    background-color: #bdbdbd;
+}
+
+button:hover {
+    background-color: #2d8ecf;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.book-block ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+dialog {
+    margin-top: 180px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    width: 400px;
+    height: 450px;
+    background-color: #dadada;
+    box-shadow: 10px 10px 10px rgb(141, 116, 86);
+    padding: 40px;
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+}
+
+dialog #title, dialog #author, dialog #year {
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    border: solid 1px rgb(109, 109, 109);
+    padding: 5px;
+}
+
+dialog input:focus {
+    outline-color: rgb(0, 120, 175);
+}
+
+dialog input:invalid {
+    outline-color:red;
+}
+
+dialog #submitbutton, #closebutton {
+    width: 150px;
+    height: 60px;
+    align-self: end;
+    border: none;
+    border-radius: 15px;
+    background-color: #37afff;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 3px 3px 10px rgb(194, 194, 194);
+    font-weight: 600;
+}
+
+#submitbutton:hover, #closebutton:hover {
+    background-color: #2d8ecf;
+}
+
+.dialog-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+dialog .input-box-title, dialog .input-box-year, dialog .input-box-author, dialog .input-box-read{
+    display: flex;
+    align-items: center;
+}
+
+dialog #read {
+    padding: 0;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+}
+
+
+dialog label {
+    width: 100px;
+    font-size: 20px;
+}
+
+dialog .dialog-title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+

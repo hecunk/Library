@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <dialog>
+        <div class="dialog-title">Add new book:</div>
+        <form>
+                <div class="input-box-title">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" required maxlength="50">
+                </div>
+                <div class="input-box-author">
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author" required maxlength="50">
+                </div>
+                <div class="input-box-year">
+            <label for="year">Year:</label>
+            <input type="number" name="year" id="year" required min="0" max="2025">
+                </div>
+                <div class="input-box-read">
+            <label for="read">Read:</label>
+            <input type="checkbox" name="read" id="read">
+                </div>
+                <div class="dialog-buttons">
+            <button id="submitbutton" type="submit">Submit</button>
+            <button id="closebutton" type="button">Close</button>
+                </div>
+        </form>
+    </dialog>
+    <div class="header">
+        <h1>This is a Library!</h1>
+        <button id="PlusButton"><img src="images/plus-svgrepo-com.svg" alt=""></button>
+    </div>
+    <div class="main-cont">
+        <div class="book-block">
+            <ul>
+                <li>Title: Harry Potter</li>
+                <li>Author: JK Rowling</li>
+                <li>Year: 2004</li>
+                <li>Read: Not read</li>
+            </ul>
+            <div class="buttons">
+                <button class="read">Read</button>
+                <button class="delete">Delete</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
